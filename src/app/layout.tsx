@@ -5,9 +5,16 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Script from "next/script";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Sekalian Foto — Photobooth di Kafe",
   description: "Rekam Jejak Kebahagiaan — photobooth di kafe favoritmu.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico?v=4" },
+      { url: "/icon.png?v=4", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png?v=4", sizes: "180x180" }],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
