@@ -43,7 +43,9 @@ export default function Locations() {
   ];
 
   return (
-    <section id="locations" className="container py-16 scroll-mt-20 md:scroll-mt-28">
+    <section className="container py-16">
+    {/* anchor sentinel: berhenti pas di bawah navbar */}
+    <span id="locations" className="block h-0 scroll-mt-16 md:scroll-mt-20" />
       <div className="mb-6 flex items-end justify-between gap-4">
         <div>
           <h2 className="text-3xl font-extrabold tracking-tight">Lokasi Sekalian Foto</h2>
