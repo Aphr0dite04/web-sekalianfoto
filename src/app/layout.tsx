@@ -5,7 +5,11 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Script from "next/script";
 
-export const metadata = {
+// baru:
+import LoaderOverlay from "@/components/LoaderOverlay";
+import PageTransition from "@/components/PageTransition";
+
+export const metadata: Metadata = {
   title: "Sekalian Foto — Photobooth di Kafe",
   description: "Rekam Jejak Kebahagiaan — photobooth di kafe favoritmu.",
   icons: {
@@ -14,6 +18,14 @@ export const metadata = {
       { url: "/icon.png?v=4", type: "image/png", sizes: "512x512" },
     ],
     apple: [{ url: "/apple-touch-icon.png?v=4", sizes: "180x180" }],
+  },
+  // biar preview link makin kece (pakai /opengraph-image)
+  openGraph: {
+    images: [{ url: "/opengraph-image" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/opengraph-image"],
   },
 };
 
@@ -35,8 +47,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="min-h-screen bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 antialiased">
         <ThemeProvider>
+          {/* splash blur + mascot (auto hilang < 1 detik) */}
+          <LoaderOverlay />
+
           <Nav />
-          {children}
+
+          {/* transisi halus antar halaman/segment */}
+          <PageTransition>{children}</PageTransition>
+
           <Footer />
         </ThemeProvider>
       </body>
