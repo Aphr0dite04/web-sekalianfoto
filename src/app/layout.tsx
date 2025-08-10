@@ -1,3 +1,4 @@
+// src/app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/lib/theme";
@@ -10,6 +11,10 @@ import LoaderOverlay from "@/components/LoaderOverlay";
 import PageTransition from "@/components/PageTransition";
 
 export const metadata: Metadata = {
+  // ⬇️ penting untuk hilangin warning OG/Twitter
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://web-sekalianfoto.vercel.app"
+  ),
   title: "Sekalian Foto — Photobooth di Kafe",
   description: "Rekam Jejak Kebahagiaan — photobooth di kafe favoritmu.",
   icons: {
@@ -19,12 +24,19 @@ export const metadata: Metadata = {
     ],
     apple: [{ url: "/apple-touch-icon.png?v=4", sizes: "180x180" }],
   },
-  // biar preview link makin kece (pakai /opengraph-image)
+  // preview link (pakai route /opengraph-image)
   openGraph: {
+    title: "Sekalian Foto — Photobooth di Kafe",
+    description: "Rekam Jejak Kebahagiaan — photobooth di kafe favoritmu.",
+    url: "/",
+    siteName: "Sekalian Foto",
     images: [{ url: "/opengraph-image" }],
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
+    title: "Sekalian Foto — Photobooth di Kafe",
+    description: "Rekam Jejak Kebahagiaan — photobooth di kafe favoritmu.",
     images: ["/opengraph-image"],
   },
 };

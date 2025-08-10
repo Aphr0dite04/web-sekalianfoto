@@ -66,10 +66,10 @@ export default function Hero() {
 
             <div className="flex items-center gap-6 pt-4">
               <div className="flex items-center gap-2 text-sm">
-                <ShieldCheck className="size-4" /> Garansi operasional
+                <ShieldCheck className="size-4" /> Beroperasional
               </div>
               <div className="flex items-center gap-2 text-sm">
-                <Gauge className="size-4" /> Cepat &amp; stabil
+                <Gauge className="size-4" /> Cepat &amp; baik
               </div>
               <div className="flex items-center gap-2 text-sm">
                 <Sparkles className="size-4" /> Template estetik
