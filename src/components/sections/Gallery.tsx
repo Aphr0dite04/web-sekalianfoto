@@ -1,4 +1,5 @@
-'use client'
+'use client';
+
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -7,7 +8,7 @@ import { burst } from "@/utils/confetti";
 
 export default function Gallery() {
   const wa =
-    "https://wa.me/6281387659249?text=Halo%20Sekalian%20Foto%2C%20aku%20mau%20minta%20softcopy%20foto%20aku.%20Namaku%3A%20_____%20Lokasi%3A%20_____%20Tanggal%2FJam%3A%20_____";
+    "https://wa.me/6285777951403?text=Halo%20Sekalian%20Foto%2C%20aku%20mau%20minta%20softcopy%20foto%20aku.%20Namaku%3A%20_____%20Lokasi%3A%20_____%20Tanggal%2FJam%3A%20_____";
   const [toast, setToast] = React.useState(false);
 
   const handleClick = (el: HTMLElement) => {

@@ -1,6 +1,6 @@
-
 import React from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+
 export default function FAQ() {
   const items = [
     { q: "Pembayaran apa saja yang diterima?", a: "Kami menerima tunai dan non-tunai. Untuk non-tunai kami menggunakan QRIS agar mudah dipakai berbagai bank atau e-wallet." },
@@ -25,5 +25,5 @@ export default function FAQ() {
         </Accordion>
       </div>
     </section>
-  )
+  );
 }

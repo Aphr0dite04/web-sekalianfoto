@@ -14,11 +14,13 @@ export default function MapShot({ src, alt }: { src: string; alt: string }) {
         src={src}
         alt={alt}
         fill
-        sizes="(min-width:1024px) 600px, 100vw"
+        // sesuai lebar kartu: 620 (lg), 560 (sm), 90vw (mobile)
+        sizes="(min-width:1280px) 620px, (min-width:640px) 560px, 90vw"
         className={`object-cover transition duration-500 ease-out ${
           loaded ? 'opacity-100 scale-100 blur-0' : 'opacity-0 scale-[1.02] blur-sm'
         }`}
         onLoad={() => setLoaded(true)}
+        loading="lazy"
         priority={false}
       />
     </div>

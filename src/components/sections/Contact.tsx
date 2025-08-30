@@ -7,7 +7,7 @@ export default function Contact() {
   const ig = "https://www.instagram.com/sekalianfoto";
   const tiktok = "https://www.tiktok.com/@sekalianfoto";
   const yt = "https://www.youtube.com/@Sekalianfoto";
-  const wa = "https://wa.me/6281387659249";
+  const wa = "https://wa.me/6285777951403";
 
   return (
     <section id="contact" className="container py-16">
